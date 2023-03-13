@@ -10,6 +10,7 @@ func init() {
 	if os.Getenv("ENV") != "production" {
 		initializers.LoadEnv()
 	}
+	initializers.ConnectDB()
 }
 
 func main() {
