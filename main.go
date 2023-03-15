@@ -1,9 +1,11 @@
 package main
 
 import (
-	"os"
-	"github.com/gin-gonic/gin"
 	"go-mongo/initializers"
+	"go-mongo/routes"
+	"os"
+
+	"github.com/gin-gonic/gin"
 )
 
 func init() {
@@ -20,5 +22,8 @@ func main() {
 		"message": "Hello from the other side!",
 		})
 	})
+
+	routes.UserRoute(router)
+
 	router.Run()
 }
